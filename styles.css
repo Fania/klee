@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background: rgb(79, 79, 109);
 }
 
 img {
@@ -11,47 +12,13 @@ img {
 }
 
 svg {
-  /* width: 100%; */
-  /* height: auto; */
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   opacity: 1;
 }
-
-svg rect {
-  opacity: .7;
-  /* animation: colourFade alternate ease-in-out infinite 20s; */
-  /* animation: fade ease-in-out infinite 10s; */
-  /* transition: opacity 2s; */
-  /* mix-blend-mode: normal;
-  mix-blend-mode: multiply;
-  mix-blend-mode: overlay;
-  mix-blend-mode: lighten;
-  mix-blend-mode: color-burn;
-  mix-blend-mode: hard-light;
-  mix-blend-mode: soft-light;
-  mix-blend-mode: luminosity;
-  mix-blend-mode: difference; */
-  /* opacity: 0; */
-}
-
-
-/* svg rect:before {
-  display: block;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  mix-blend-mode: multiply;
-  transition: opacity .5s linear;
-}
-
-svg rect:before:hover {
-  opacity: 1;
-} */
-
 
 
 svg text {
@@ -72,35 +39,93 @@ svg .coordinates.hide {
 #rect_02 {fill: rgba(226, 185, 147) }
 #rect_04 {fill: rgba(158, 190, 236) }
 
-/* #rect_09 {fill: rgba(67, 162, 226, 0.541) } 
-#rect_08 {fill: rgba(171, 203, 245, 0.418) } 
-#rect_07 {fill: rgba(82, 168, 248, 0.452) } 
-#rect_01 {fill: rgba(249, 254, 250, 0.5) } 
-#rect_06 {fill: rgba(201, 173, 112, 0.5) } 
-#rect_05 {fill: rgba(230, 93, 55, 0.5) } 
-#rect_03 {fill: rgba(236, 109, 137, 0.568) } 
-#rect_02 {fill: rgba(226, 185, 147, 0.5) } 
-#rect_04 {fill: rgba(158, 190, 236, 0.192) }  */
 
-svg rect {
-  stroke: rgba(100, 100, 100, 0.4);
-  stroke-width: 2 ;
+
+
+#rect_01 {
+  animation: rect01 ease-in-out infinite 80s;
+}
+@keyframes rect01 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(727px, 0); }
+  50% { transform: translate(727px, -450px); }
+  75% { transform: translate(0, -450px); }
 }
 
-@keyframes colourFade {
-  0%   { mix-blend-mode: normal; } 
-  10%  { mix-blend-mode: multiply; }
-  20%  { mix-blend-mode: overlay; }
-  30%  { mix-blend-mode: lighten; }
-  40%  { mix-blend-mode: color-burn; }
-  50%  { mix-blend-mode: hard-light; }
-  60%  { mix-blend-mode: soft-light; }
-  70%  { mix-blend-mode: luminosity; }
-  80%  { mix-blend-mode: difference; }
+#rect_02 {
+  animation: rect02 ease-in-out infinite 40s;
 }
-@keyframes fade {
-  0%   { opacity: 0; } 
-  50%  { opacity: 1; }
-  100%  { opacity: 0; }
+@keyframes rect02 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(605px, 0); }
+  50% { transform: translate(605px, -374px); }
+  75% { transform: translate(0, -374px); }
+  100% { transform: translate(0, 0); }
 }
 
+#rect_03 {
+  animation: rect03 ease-in-out infinite 80s;
+}
+@keyframes rect03 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-595px, 0); }
+  50% { transform: translate(-595px, 418px); }
+  75% { transform: translate(0, 418px); }
+  100% { transform: translate(0, 0); }
+}
+
+#rect_04 {
+  animation: rect04 ease-in-out infinite 60s;
+}
+@keyframes rect04 {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(0, 342px); }
+  50% { transform: translate(-367px, 342px); }
+  75% { transform: translate(-367px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+#rect_05 {
+  animation: rect05 ease-in-out infinite 80s;
+}
+@keyframes rect05 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-214px, -237px); }
+  100% { transform: translate(0, 0); }
+}
+
+#rect_06 {
+  animation: rect06 ease-in-out infinite 40s;
+}
+@keyframes rect06 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(297px, 203px); }
+  100% { transform: translate(0, 0); }
+}
+
+#rect_07 {
+  animation: rect07 ease-in-out infinite 20s;
+}
+@keyframes rect07 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(248px, -164px); }
+  100% { transform: translate(0, 0); }
+}
+
+#rect_08 {
+  animation: rect08 ease-in-out infinite 20s;
+}
+@keyframes rect08 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-158px, 114px); }
+  100% { transform: translate(0, 0); }
+}
+
+#rect_09 {
+  animation: rect09 ease-in-out infinite 40s;
+}
+@keyframes rect09 {
+  0% { transform-origin: center; transform: scale(1); }
+  50% { transform-origin: center; transform: scale(.5); }
+  100% { transform-origin: center; transform: scale(1); }
+}
