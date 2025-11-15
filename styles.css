@@ -1,6 +1,9 @@
 body {
   margin: 0;
   background: rgb(79, 79, 109);
+  height: 100dvh;
+  display: flex;
+  align-items: center;
 }
 
 img {
@@ -15,9 +18,9 @@ svg {
   width: 100%;
   height: auto;
   max-height: 100vh;
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0;
-  opacity: 1;
+  /* position: absolute; */
+  /* top: 0; bottom: 0; left: 0; right: 0; */
+  /* opacity: 1; */
 }
 
 
